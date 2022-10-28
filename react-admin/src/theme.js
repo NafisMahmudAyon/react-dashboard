@@ -1,7 +1,7 @@
 import { createContext, useState, useMemo } from "react";
 import { createTheme } from "@mui/material/styles"
-import { color } from "@mui/system";
-import Context from "@mui/base/TabsUnstyled/TabsContext";
+// import { color } from "@mui/system";
+// import Context from "@mui/base/TabsUnstyled/TabsContext";
 
 // Color design token
 export const tokens = (mode) =>({
@@ -213,5 +213,7 @@ export const useMode = () => {
     []
     );
 
-    const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
+    const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+
+    return[theme, colorMode];
 }
